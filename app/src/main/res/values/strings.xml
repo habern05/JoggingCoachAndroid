@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">JoggingCoachAndroid</string>
     <string name="title_activity_create_user">CreateUserActivity</string>
+    <string name="title_activity_interval_dialog">IntervalDialogActivity</string>
 </resources>

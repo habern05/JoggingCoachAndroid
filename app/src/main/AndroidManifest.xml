@@ -18,7 +18,13 @@
         <activity
             android:name=".CreateUserActivity"
             android:label="@string/title_activity_create_user"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".IntervalDialogActivity"
+            android:label="@string/title_activity_interval_dialog"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".IntervalModeActivity" />
+        <activity android:name=".MenuActivity"></activity>
     </application>
 
 </manifest>
