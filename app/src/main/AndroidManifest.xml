@@ -16,7 +16,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <service android:name="at.haraldbernhard.joggingcoach.SAPServiceProvider" />
+        <service android:name="at.haraldbernhard.joggingcoachandroid.SAPServiceProvider" />
 
         <receiver android:name="com.samsung.android.sdk.accessory.RegisterUponInstallReceiver">
             <intent-filter>
