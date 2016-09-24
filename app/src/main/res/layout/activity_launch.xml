@@ -3,14 +3,75 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="at.haraldbernhard.joggingcoachandroid.LaunchActivity">
+    tools:context="at.haraldbernhard.joggingcoach.LaunchActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <include layout="@layout/my_toolbar"
+        android:id="@+id/my_toolbar"/>
+
+    <TableLayout
+        android:layout_below="@id/my_toolbar"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        >
+
+        <TableRow>
+            <TextView
+                android:text="@string/greetings"
+                android:textColor="#FFFFFF"
+                android:textSize="24dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="30dp"
+                android:id="@+id/textViewGreeting"
+                android:textAlignment="center"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/textViewPersonalGreeting"
+                android:text="Hello Harald"
+                android:textAlignment="center"
+                android:layout_marginTop="30dp"/>
+        </TableRow>
+        <TableRow>
+
+            <TextView
+
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Thank you for installing JoggingCoach. \n It will help you to improve your training performance."
+                android:id="@+id/textViewInformation1"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_width="wrap_content"
+                android:text="@string/start"
+                android:id="@+id/buttonStartTraining"
+                android:onClick="startBasicActivity"
+                android:layout_marginTop="30dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/createUser"
+                android:id="@+id/textViewCreateNewUser"
+                android:onClick="startCreateUserActivity"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="All data are stored locally on the device."
+                android:id="@+id/textViewInformation2"
+                android:layout_marginTop="40dp"
+                android:textAlignment="center"
+                />
+        </TableRow>
+    </TableLayout>
 </RelativeLayout>

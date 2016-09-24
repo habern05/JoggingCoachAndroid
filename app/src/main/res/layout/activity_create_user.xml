@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="at.haraldbernhard.joggingcoach.CreateUserActivity">
+
+    <include layout="@layout/my_toolbar"
+        android:id="@+id/my_toolbar"/>
+
+    <TableLayout
+        android:layout_below="@id/my_toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+        <TableRow
+            android:layout_marginTop="20dp">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:hint="@string/username"
+                android:ems="10"
+                android:id="@+id/editTextUsername"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="30dp">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:ems="10"
+                android:id="@+id/editTextAge"
+                android:hint="Age (0-100)" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="30dp">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:ems="10"
+                android:id="@+id/editTextSize"
+                android:hint="Size (0-250 cm)" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="30dp">
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:digits="0123456789"
+                android:ems="10"
+                android:id="@+id/editTextWeight"
+                android:hint="Weight (0-200 kg)" />
+        </TableRow>
+        <TableRow
+            android:layout_marginTop="30dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/createUser"
+                android:id="@+id/buttonCreateAvatar"
+                android:onClick="createNewAvatar"
+                android:layout_alignParentBottom="true"
+                />
+        </TableRow>
+    </TableLayout>
+</RelativeLayout>
