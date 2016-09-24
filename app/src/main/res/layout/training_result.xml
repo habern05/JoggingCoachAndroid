@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true">
+
+        <TableRow>
+            <TextView
+                android:layout_marginTop="20dp"
+                android:id="@+id/textViewDateAdapter"
+                android:text="Date"
+                android:paddingBottom="3dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textViewTimeAdapter"
+                android:layout_toRightOf="@id/textViewDateAdapter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Time"
+                android:paddingRight="40dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/textViewDistanceAdapter"
+                android:layout_below="@id/textViewTimeAdapter"
+                android:layout_alignLeft="@id/textViewTimeAdapter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Distance"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+        </TableRow>
+        <TableRow>
+
+            <TextView
+                android:id="@+id/textViewCalorieAdapter"
+                android:layout_toRightOf="@id/textViewTimeAdapter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Calorie"
+                android:paddingRight="40dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/textViewSpeedAAdapter"
+                android:text="Speed"
+                android:layout_below="@id/textViewCalorieAdapter"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                />
+        </TableRow>
+    </TableLayout>
+
+
+
+</RelativeLayout>

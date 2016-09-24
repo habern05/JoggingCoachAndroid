@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="at.haraldbernhard.joggingcoachandroid.TrainingModeActivity">
+
+    <include layout="@layout/my_toolbar"
+        android:id="@+id/my_toolbar"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/my_toolbar"
+        android:stretchColumns="2">
+        <TableRow>
+            <TextView
+                android:text="Time"
+                android:id="@+id/textViewLabelTime"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_column="0"
+                android:layout_margin="20dp"/>
+            <TextView
+                android:id="@+id/textViewTime"
+                android:text="0:0:0"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:layout_margin="20dp"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Distance"
+                android:id="@+id/textViewLabelDistance"
+                android:layout_column="0"
+                android:layout_margin="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:id="@+id/textViewDistance"
+                android:text="0:0"
+                android:layout_column="1"
+                android:layout_margin="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textViewLabelCalorie"
+                android:text="Calorie"
+                android:layout_column="0"
+                android:layout_margin="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+            <TextView
+                android:id="@+id/textViewCalorie"
+                android:text="0"
+                android:layout_column="1"
+                android:layout_margin="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/textViewLabelSpeed"
+                android:text="Speed"
+                android:layout_column="0"
+                android:layout_margin="20dp"
+                android:textAppearance="?android:attr/textAppearanceMedium"/>
+            <TextView
+                android:id="@+id/textViewSpeedA"
+                android:text="0"
+                android:layout_column="1"
+                android:layout_margin="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+            <TextView
+                android:id="@+id/textViewSpeedI"
+                android:text="0"
+                android:layout_column="2"
+                android:layout_margin="20dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:text="@string/start"
+                android:id="@+id/buttonStart"
+                android:onClick="buttonStartTraining"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_margin="20dp"/>
+            <Button
+                android:text="@string/pause"
+                android:id="@+id/buttonPause"
+                android:onClick="buttonPauseTraining"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_margin="20dp"/>
+            <Button
+                android:text="@string/stop"
+                android:id="@+id/buttonStop"
+                android:onClick="buttonStopTraining"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_margin="20dp"/>
+        </TableRow>
+
+
+    </TableLayout>
+
+</RelativeLayout>

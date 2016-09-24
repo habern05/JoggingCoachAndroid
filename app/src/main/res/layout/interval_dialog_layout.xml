@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/interval_dialog_layout">
+
+
+    <TableRow
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Workout"
+            android:id="@+id/textViewWorkout"
+            />
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/npWorkoutMin"
+            android:theme="@android:style/Theme.Dialog"/>
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nPWorkoutSec"
+            android:theme="@android:style/Theme.Dialog"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Recreation"
+            android:id="@+id/textViewRecreation" />
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/npRecreationMin"
+            android:theme="@android:style/Theme.Dialog"/>
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/npRecreationSec"
+            android:theme="@android:style/Theme.Dialog"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Number of intervals"
+            android:id="@+id/textViewIntervals" />
+
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/npIntervals"
+            android:theme="@android:style/Theme.Dialog"/>
+
+    </TableRow>
+</TableLayout>

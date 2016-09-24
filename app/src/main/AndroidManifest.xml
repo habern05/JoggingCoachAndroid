@@ -24,7 +24,9 @@
             android:label="@string/title_activity_interval_dialog"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".IntervalModeActivity" />
-        <activity android:name=".MenuActivity"></activity>
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".TrainingDiaryActivity" />
+        <activity android:name=".TrainingModeActivity"></activity>
     </application>
 
 </manifest>

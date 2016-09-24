@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="at.haraldbernhard.joggingcoach.LaunchActivity">
+    tools:context="at.haraldbernhard.joggingcoachandroid.LaunchActivity">
 
     <include layout="@layout/my_toolbar"
         android:id="@+id/my_toolbar"/>
