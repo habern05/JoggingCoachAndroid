@@ -2,12 +2,37 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="at.haraldbernhard.joggingcoachandroid">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="com.samsung.accessory.permission.ACCESSORY_FRAMEWORK" />
+    <uses-permission android:name="com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY" />
+    <uses-permission android:name="com.samsung.WATCH_APP_TYPE.Companion" />
+    <uses-permission android:name="com.samsung.wmanager.ENABLE_NOTIFICATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <service android:name="at.haraldbernhard.joggingcoach.SAPServiceProvider" />
+
+        <receiver android:name="com.samsung.android.sdk.accessory.RegisterUponInstallReceiver">
+            <intent-filter>
+                <action android:name="com.samsung.accessory.action.REGISTER_AGENT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.samsung.android.sdk.accessory.ServiceConnectionIndicationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.samsung.accessory.action.SERVICE_CONNECTION_REQUESTED" />
+            </intent-filter>
+        </receiver>
+
+        <meta-data
+            android:name="AccessoryServicesLocation"
+            android:value="/res/xml/sapservices.xml" />
+
         <activity android:name=".LaunchActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -15,18 +40,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".CreateUserActivity"
-            android:label="@string/title_activity_create_user"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".IntervalDialogActivity"
-            android:label="@string/title_activity_interval_dialog"
-            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".IntervalModeActivity" />
         <activity android:name=".MenuActivity" />
         <activity android:name=".TrainingDiaryActivity" />
-        <activity android:name=".TrainingModeActivity"></activity>
+        <activity android:name=".TrainingModeActivity" />
+        <activity android:name=".CreateUserActivity" />
+        <activity android:name=".IntervalDialogActivity"></activity>
     </application>
 
 </manifest>
